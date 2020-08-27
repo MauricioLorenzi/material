@@ -1,0 +1,155 @@
+/* variables */
+$color: #643ae0;
+$hover-color: #6311e0;
+$font-color: #ffffff;
+$font-family-normal: "Raleway";
+$font-family-bold: "Raleway Bold";
+$font-family-italic: "Raleway Italic";
+
+/* fonts */
+
+/* Raleway regular */
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Raleway bold */
+@font-face {
+    font-family: "Raleway Bold";
+      src: url("../fonts/Raleway-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Raleway black */
+@font-face {
+    font-family: "Raleway Italic";
+    src: url("../fonts/Raleway-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* html */
+html
+{
+    overflow: auto;
+}
+
+/* body */
+body{
+    display: flex;
+    font-family: $font-family-normal;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.body-wrapper
+{
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* button */
+.btn {
+    border: none;
+    width: 100px;
+    height: 30px;
+    background-color: $color;
+    color: $font-color;
+    font-family: $font-family-bold;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.btn:hover {
+    background-color: $hover-color;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+/* navbar */
+%navbar-shared
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    li {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        a{
+            text-decoration: none;
+            color: $font-color;
+        }
+    }
+
+    li:hover:not(.navbar-brand)
+    {
+        background-color: $hover-color;
+        cursor: pointer;
+    }
+}
+.navbar {
+    background-color: $color;
+    color: $font-color;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+}
+
+.nav-wrapper
+{
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: stretch;
+}
+
+.navbar-list
+{
+    @extend %navbar-shared;
+    justify-content: flex-start;
+}
+
+.navbar-list-right
+{
+    @extend %navbar-shared;
+    justify-content: flex-end;
+
+    span
+    {
+        font-size: 0.7em;
+        font-family: $font-family-italic;
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+.navbar-brand
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: $font-family-bold;
+    font-weight: normal;
+    font-style: normal;
+    margin-right: 5px;
+}
+
+.navbar-brand:hover
+{
+    background-color: $color;
+}
+
+.right
+{
+    margin-left: auto;
+}
