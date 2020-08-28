@@ -127,10 +127,13 @@ body{
 
     span
     {
+        align-self: center;
         font-size: 0.7em;
         font-family: $font-family-italic;
         font-weight: normal;
         font-style: normal;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 
@@ -149,7 +152,41 @@ body{
     background-color: $color;
 }
 
-.right
+.navbar-dropdown
 {
-    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border: none;
+    font-family: $font-family-normal;
+    color: $font-color;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar-dropdown::after
+{
+    content: '\276F';
+    display: block;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.navbar-dropdown:focus{
+    outline: none;
+}
+
+.navbar-dropdown:hover{
+    background-color: $hover-color;
+}
+
+.navbar-dropdown-list
+{
+    display: none;
 }

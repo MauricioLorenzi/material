@@ -131,10 +131,15 @@ body {
 }
 
 .navbar-list-right span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   font-size: 0.7em;
   font-family: "Raleway Italic";
   font-weight: normal;
   font-style: normal;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .navbar-brand {
@@ -150,7 +155,43 @@ body {
   background-color: #643ae0;
 }
 
-.right {
-  margin-left: auto;
+.navbar-dropdown {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  font-family: "Raleway";
+  color: #ffffff;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar-dropdown::after {
+  content: '\276F';
+  display: block;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.navbar-dropdown:focus {
+  outline: none;
+}
+
+.navbar-dropdown:hover {
+  background-color: #6311e0;
+}
+
+.navbar-dropdown-list {
+  display: none;
 }
 /*# sourceMappingURL=material.css.map */
